@@ -1,1 +1,1 @@
-web: node app.js
+web: node /Users/admin/Documents/ShuttleLaunch/app/app.js
