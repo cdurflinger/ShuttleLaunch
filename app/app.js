@@ -1,6 +1,9 @@
 const http = require("http");
 const fs = require("fs");
-const port = 3000;
+let port = process.env.PORT;
+if(port === null || port == "" || port === undefined){
+    port = 3000;
+}
 const serverUrl = "localhost";
 
 const app = http.createServer((req, res) => {
