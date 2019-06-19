@@ -1,9 +1,33 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<nav>
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+    <ul>
+        <li>Home</li>
+        <li>News</li>
+        <li>Upcoming Launches</li>
+    </ul>
+</nav>
 <br>
+<div class="container">
 {{#each data}}
+{{#if @first}}
+<section>
+    <h2>Next launch: {{windowstart}}</h2>
+    <h3>{{rocket.name}}</h3>
+    <img src="{{rocket.imageURL}}">
+    <article>
+        {{missions.[0].description}}
+    </article>
+</section>
+<br>
+{{else}}
+<section>
 <p>Launch ID: {{id}} - <strong>{{name}}</strong> </p>
 <p>Launch is at: <u>{{location.name}}</u></p>
 <p>The Start Date is: <em>{{windowstart}}</em></p>
+</section>
 <br>
+{{/if}}
 {{/each}}
+</div>

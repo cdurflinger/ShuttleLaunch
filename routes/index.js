@@ -8,7 +8,12 @@ router.get('/', (req, res, next) => {
     .then((res) => res.json())
     .then((data) => {
         const DATA_LAUNCHES = data.launches;
-        res.render('index', {title: 'ShuttleLaunch', condition: false, data: DATA_LAUNCHES});
+        res.render('index', {
+            title: 'ShuttleLaunch',
+            condition: false,
+            data: DATA_LAUNCHES,
+            style: 'main.css',
+        });
     })
 })
 
