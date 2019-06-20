@@ -17,4 +17,13 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/news', (req, res, next) => {
+    // https://spaceflightnewsapi.net/api/v1/articles
+        res.render('news', {
+            title: 'ShuttleLaunch',
+            condition: false,
+            style: 'news.css',
+        });
+})
+
 module.exports = router;

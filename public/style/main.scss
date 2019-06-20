@@ -1,5 +1,12 @@
 @import './variables';
 
+@mixin flexSetup() {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 html, body {
     color: $primaryColor;
     margin: 0;
@@ -9,12 +16,14 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+a {
+    text-decoration: none;
+    color: $primaryColor;
+}
 nav {
-    background-color: rgba(21, 26, 0, .5);
-    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+    @include flexSetup();
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     height: 5vh;
     header {
         height: 100%;
@@ -22,10 +31,10 @@ nav {
     h1 {
         font-size: 3em;
         text-align: center;
-        margin: 0 0 0 1.5em;
+        margin: 0 0 0 1em;
         height: 100%;
-        display: flex;
-        align-items: center;
+        @include flexSetup();
+        justify-content: center;
     }
     ul {
         margin: 0;
@@ -33,28 +42,63 @@ nav {
         width: 100%;
         font-size: 1.5em;
         list-style: none;
-        display: flex;
-        align-items: center;
+        @include flexSetup();
+        flex-direction: row;
         justify-content: space-around;
     }
 }
 .container {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+    @include flexSetup();
     justify-content: center;
-    align-items: center;
-    section {
-        background-color: rgba(21, 26, 0, .5);
+    #premierLaunch {
+        @include flexSetup();
+        align-items: flex-start;
+        background-color: $primaryBackground;
+        width: 100%;
+        border-radius: none;
+        h2 {
+            font-size: 2.5em;
+            padding-left: 1em;
+        }
+        h3 {
+            font-size: 3em;
+        }
+        .rocketDescription {
+            @include flexSetup();
+            width: 100%;
+        }
+        article {
+            padding: 1em;
+            p {
+                font-weight: 800;
+            }
+        }
+    }
+    .launchSections {
+        @include flexSetup();
+        background-color: $primaryBackground;
         height: auto;
         width: 85%;
         padding: .75em;
         border-radius: 8px;
+        p {
+            padding-left: 1em;
+            font-size: 1.5em;
+            width: 100%;
+        }
         h3 {
-            text-align: center;
+            font-size: 2em;
         }
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
+    }
+    img {
+        max-width: 100%;
+        max-height: 60vh;
+        border-radius: 8px;
+    }
+    h3 {
+        text-align: center;
+        width: 100%;
     }
 }

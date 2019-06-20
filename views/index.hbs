@@ -3,29 +3,32 @@
         <h1>{{title}}</h1>
     </header>
     <ul>
-        <li>Home</li>
-        <li>News</li>
-        <li>Upcoming Launches</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/upcoming">Upcoming Launches</a></li>
     </ul>
 </nav>
-<br>
 <div class="container">
 {{#each data}}
 {{#if @first}}
-<section>
+<section id="premierLaunch">
     <h2>Next launch: {{windowstart}}</h2>
-    <h3>{{rocket.name}}</h3>
-    <img src="{{rocket.imageURL}}">
-    <article>
-        {{missions.[0].description}}
-    </article>
+    <div class="rocketDescription">
+        <h3>{{rocket.name}}</h3>
+        <img src="{{rocket.imageURL}}">
+        <article>
+            <p>Rocket Description:</p>
+            {{missions.[0].description}}
+        </article>
+    </div>
 </section>
 <br>
 {{else}}
-<section>
-<p>Launch ID: {{id}} - <strong>{{name}}</strong> </p>
+<section class="launchSections">
+<p>Launch Date: <em>{{windowstart}}</em></p>
+<h3><strong>{{name}}</strong></h3>
+<img src="{{rocket.imageURL}}">
 <p>Launch is at: <u>{{location.name}}</u></p>
-<p>The Start Date is: <em>{{windowstart}}</em></p>
 </section>
 <br>
 {{/if}}
