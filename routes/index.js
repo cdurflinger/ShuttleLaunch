@@ -18,12 +18,16 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/news', (req, res, next) => {
-    // https://spaceflightnewsapi.net/api/v1/articles
+    fetch('https://spaceflightnewsapi.net/api/v1/articles')
+    .then((res) => res.json())
+    .then((data) => {
         res.render('news', {
             title: 'ShuttleLaunch',
             condition: false,
+            data: data.docs,
             style: 'news.css',
         });
+    })
 })
 
 module.exports = router;

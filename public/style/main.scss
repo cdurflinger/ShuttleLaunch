@@ -11,17 +11,14 @@ html, body {
     color: $primaryColor;
     margin: 0;
     padding: 0;
-    background-image: url('/img/jeremy-thomas-98201-unsplash.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #FBFBFB;
 }
 a {
     text-decoration: none;
     color: $primaryColor;
 }
 nav {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgb(32, 26, 35);
     @include flexSetup();
     flex-direction: row;
     height: 5vh;

@@ -2,10 +2,8 @@ html, body {
   color: white;
   margin: 0;
   padding: 0;
-  background-image: url("/img/jeremy-thomas-98201-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  background-color: #FBFBFB;
 }
 
 a {
@@ -14,7 +12,7 @@ a {
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #201a23;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,5 +81,61 @@ nav ul {
       flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.container h1 {
+  color: black;
+}
+
+.container section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%;
+  background-color: rgba(32, 26, 35, 0.8);
+}
+
+.container section .articleImg {
+  width: 30%;
+}
+
+.container section .articleImg img {
+  width: 100%;
+}
+
+.container section .article {
+  width: 70%;
 }
 /*# sourceMappingURL=news.css.map */

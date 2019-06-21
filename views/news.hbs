@@ -8,3 +8,17 @@
         <li><a href="/upcoming">Upcoming Launches</a></li>
     </ul>
 </nav>
+<div class="container">
+    <h1>Top News Stories</h1>
+    {{#each data}}
+        <section>
+            <div class="articleImg">
+                <a href="{{url}}"><img src="{{featured_image}}"></a>
+            </div>
+            <div class="article">
+                <h2>{{title}}</h1>
+                <h3>Source: {{news_site_long}}</h3>
+            </div>
+        </section>
+    {{/each}}
+</div>

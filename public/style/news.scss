@@ -11,17 +11,15 @@ html, body {
     color: $primaryColor;
     margin: 0;
     padding: 0;
-    background-image: url('/img/jeremy-thomas-98201-unsplash.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    background-color: #FBFBFB;
 }
 a {
     text-decoration: none;
     color: $primaryColor;
 }
 nav {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgb(32, 26, 35);
     @include flexSetup();
     flex-direction: row;
     height: 5vh;
@@ -45,5 +43,28 @@ nav {
         @include flexSetup();
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+.container {
+    h1 {
+        color: black;
+    }
+    width: 100%;
+    @include flexSetup();
+    align-items: flex-start;
+    section {
+        @include flexSetup();
+        flex-direction: row;
+        width: 100%;
+        background-color: $primaryBackground;
+        .articleImg {
+            width: 30%;
+            img {
+                width: 100%;
+            }
+        }
+        .article {
+            width: 70%;
+        }
     }
 }
