@@ -1,0 +1,104 @@
+@import './variables';
+
+@mixin flexSetup() {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+html, body {
+    color: $primaryColor;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/jeremy-thomas-98201-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: $primaryColor;
+}
+nav {
+    background-color: rgba(0, 0, 0, .5);
+    @include flexSetup();
+    flex-direction: row;
+    height: 5vh;
+    header {
+        height: 100%;
+    }
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        margin: 0 0 0 1em;
+        height: 100%;
+        @include flexSetup();
+        justify-content: center;
+    }
+    ul {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 1.5em;
+        list-style: none;
+        @include flexSetup();
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.container {
+    width: 100%;
+    margin-top: 1em;
+    @include flexSetup();
+    justify-content: center;
+    #premierLaunch {
+        @include flexSetup();
+        align-items: flex-start;
+        background-color: $primaryBackground;
+        width: 100%;
+        border-radius: none;
+        h2 {
+            font-size: 2.5em;
+            padding-left: 1em;
+        }
+        h3 {
+            font-size: 3em;
+        }
+        .rocketDescription {
+            @include flexSetup();
+            width: 100%;
+        }
+        article {
+            padding: 1em;
+            p {
+                font-weight: 800;
+            }
+        }
+    }
+    .launchSections {
+        @include flexSetup();
+        background-color: $primaryBackground;
+        height: auto;
+        width: 85%;
+        padding: .75em;
+        border-radius: 8px;
+        p {
+            padding-left: 1em;
+            font-size: 1.5em;
+            width: 100%;
+        }
+        h3 {
+            font-size: 2em;
+        }
+    }
+    img {
+        max-width: 100%;
+        max-height: 60vh;
+        border-radius: 8px;
+    }
+    h3 {
+        text-align: center;
+        width: 100%;
+    }
+}

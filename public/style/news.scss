@@ -1,0 +1,49 @@
+@import './variables';
+
+@mixin flexSetup() {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+html, body {
+    color: $primaryColor;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/jeremy-thomas-98201-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: $primaryColor;
+}
+nav {
+    background-color: rgba(0, 0, 0, .5);
+    @include flexSetup();
+    flex-direction: row;
+    height: 5vh;
+    header {
+        height: 100%;
+    }
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        margin: 0 0 0 1em;
+        height: 100%;
+        @include flexSetup();
+        justify-content: center;
+    }
+    ul {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 1.5em;
+        list-style: none;
+        @include flexSetup();
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
