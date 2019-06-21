@@ -1,4 +1,5 @@
 html, body {
+  font-family: 'Montserrat', sans-serif;
   color: white;
   margin: 0;
   padding: 0;
@@ -84,7 +85,6 @@ nav ul {
 }
 
 .container {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,13 +98,21 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  width: 100%;
 }
 
 .container h1 {
   color: black;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.container hr {
+  width: 30%;
+  background-color: black;
+  border: none;
+  height: 2px;
 }
 
 .container section {
@@ -123,8 +131,12 @@ nav ul {
           align-items: center;
   -ms-flex-direction: row;
       flex-direction: row;
-  width: 100%;
+  width: 85%;
+  border-radius: 10px;
   background-color: rgba(32, 26, 35, 0.8);
+  margin: .5em 0;
+  -webkit-box-shadow: 2px 2px 9px 1px rgba(32, 26, 35, 0.5);
+  box-shadow: 2px 2px 9px 1px rgba(32, 26, 35, 0.5);
 }
 
 .container section .articleImg {
@@ -133,9 +145,11 @@ nav ul {
 
 .container section .articleImg img {
   width: 100%;
+  padding: .5em;
 }
 
 .container section .article {
   width: 70%;
+  padding-left: 1.5em;
 }
 /*# sourceMappingURL=news.css.map */

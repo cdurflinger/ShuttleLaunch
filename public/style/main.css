@@ -1,7 +1,9 @@
 html, body {
+  font-family: 'Montserrat', sans-serif;
   color: white;
   margin: 0;
   padding: 0;
+  width: 100%;
   background-color: #FBFBFB;
 }
 
@@ -103,6 +105,11 @@ nav ul {
           justify-content: center;
 }
 
+.container section {
+  -webkit-box-shadow: 2px 2px 9px 1px rgba(32, 26, 35, 0.5);
+  box-shadow: 2px 2px 9px 1px rgba(32, 26, 35, 0.5);
+}
+
 .container #premierLaunch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,12 +133,15 @@ nav ul {
 }
 
 .container #premierLaunch h2 {
-  font-size: 2.5em;
-  padding-left: 1em;
+  font-size: 2.75em;
+  padding-left: .5em;
+  margin-top: 0;
 }
 
 .container #premierLaunch h3 {
-  font-size: 3em;
+  font-size: 3.5em;
+  margin: 0;
+  padding-bottom: .25em;
 }
 
 .container #premierLaunch .rocketDescription {
@@ -155,8 +165,13 @@ nav ul {
   padding: 1em;
 }
 
-.container #premierLaunch article p {
+.container #premierLaunch article h4 {
   font-weight: 800;
+  font-size: 1.5em;
+}
+
+.container #premierLaunch article p {
+  font-size: 1.25em;
 }
 
 .container .launchSections {
@@ -181,13 +196,23 @@ nav ul {
 }
 
 .container .launchSections p {
-  padding-left: 1em;
+  margin-top: 0;
   font-size: 1.5em;
   width: 100%;
 }
 
 .container .launchSections h3 {
   font-size: 2em;
+}
+
+.container .launchSections article h4 {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.container .launchSections article p {
+  font-size: 1.25em;
+  padding-left: 0;
 }
 
 .container img {
@@ -199,5 +224,21 @@ nav ul {
 .container h3 {
   text-align: center;
   width: 100%;
+}
+
+#topOfPageButton {
+  display: none;
+  position: fixed;
+  bottom: 1em;
+  right: 1.25em;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(32, 26, 35, 0.8);
+  color: white;
+  padding: .75em;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

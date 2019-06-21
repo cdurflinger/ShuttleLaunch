@@ -5,32 +5,40 @@
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/news">News</a></li>
-        <li><a href="/upcoming">Upcoming Launches</a></li>
+        <li><a href="/">Upcoming Launches</a></li>
     </ul>
 </nav>
 <div class="container">
 {{#each data}}
 {{#if @first}}
-<section id="premierLaunch">
-    <h2>Next launch: {{windowstart}}</h2>
-    <div class="rocketDescription">
-        <h3>{{rocket.name}}</h3>
-        <img src="{{rocket.imageURL}}">
-        <article>
-            <p>Rocket Description:</p>
-            {{missions.[0].description}}
-        </article>
-    </div>
-</section>
-<br>
-{{else}}
-<section class="launchSections">
-<p>Launch Date: <em>{{windowstart}}</em></p>
-<h3><strong>{{name}}</strong></h3>
-<img src="{{rocket.imageURL}}">
-<p>Launch is at: <u>{{location.name}}</u></p>
-</section>
-<br>
+    <section id="premierLaunch">
+        <h2>Next launch: <span class="launchDate">{{windowstart}}</span></h2>
+        <div class="rocketDescription">
+            <h3>{{rocket.name}}</h3>
+            <a href="{{rocket.wikiURL}}"><img src="{{rocket.imageURL}}"></a>
+            <article>
+                <h4>Launch Site:</h4>
+                <p>{{location.name}}</p>
+                <h4>Mission:</h4>
+                <p>{{missions.[0].description}}</p>
+            </article>
+        </div>
+    </section>
+    <br>
+    {{else}}
+    <section class="launchSections">
+    <p>Launch Date: <em><span class="launchDate">{{windowstart}}</span></em></p>
+    <h3><strong>{{name}}</strong></h3>
+    <a href="{{rocket.wikiURL}}"><img src="{{rocket.imageURL}}"></a>
+    <article>
+        <h4>Launch site:</h4>
+        <p>{{location.name}}</p>
+        <h4>Mission:</h4>
+        <p>{{missions.[0].description}}</p>
+    </article>
+    </section>
+    <br>
 {{/if}}
 {{/each}}
 </div>
+<button id="topOfPageButton">Top</button>

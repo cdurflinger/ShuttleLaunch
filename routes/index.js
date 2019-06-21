@@ -13,6 +13,7 @@ router.get('/', (req, res, next) => {
             condition: false,
             data: DATA_LAUNCHES,
             style: 'main.css',
+            script: 'main.js',
         });
     })
 })
@@ -26,6 +27,7 @@ router.get('/news', (req, res, next) => {
             condition: false,
             data: data.docs,
             style: 'news.css',
+            script: 'news.js',
         });
     })
 })
